@@ -17,9 +17,23 @@
 }
 
 body {
-  background-color: #ecf2f6
+  background-color: white;
+  font-family: 'Poppins', sans-serif;
+  min-width: 575px;
+  /* width:1600px; */
+  align-items: center;
+  margin:auto
 }
-
+.con::before{
+content: " ";
+height:8px;width:72px;background-color:#5956E9;position: absolute;
+top:390px;left:365px
+}
+.con2::before{
+    content: " ";
+    height:15px;width:15px;border-radius:50%;background-color:#5956E9;position: absolute;
+    top:590px;left:465px
+}
   .triangle {
     position: relative;
     background-color: rgb(59, 59, 212);
@@ -48,8 +62,39 @@ body {
   .triangle:after {
     transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
   }
-  @media screen and (max-width: 914px) {
+  @media screen and (max-width: 1256px) {
     .media {
      display:none !important
+     }
+  }
+  @media screen and (max-width: 884px) {
+    .fig {
+     width:550px !important;
+     height:550px !important
+     }
+     .cloud1{
+      width: 97px !important;
+      height:59px !important;
+      margin-left: 328px !important;
+      margin-top: 123px !important;
+     }
+     .access2{
+      margin: 22px 52px !important
+     }
+     .access1{
+      width:232px !important;
+      height:218px !important;
+      margin-top: -636px !important;
+      margin-left:187px !important
+     }
+     .main2{
+      margin-left: -73px !important;
+      margin-top: -290px !important;
+     }
+     .dot{
+      width:26px !important;
+      height:26px !important;
+      margin-left: 407px !important;
+      margin-top: -472px !important;
      }
   }
