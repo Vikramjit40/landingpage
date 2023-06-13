@@ -5,24 +5,22 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <div style={{position:"relative"}}>
-      <span style={{position:"absolute",backgroundColor:"#5956E9",width:"45px",height:"45px",borderRadius:"50%",right:"300px",top:"120px"}}></span>
-<span style={{position:"absolute",backgroundColor:"#FFDC60",width:"90px",height:"90px",borderRadius:"50%",left:"-10px",bottom:"240px"}}></span>
-<span style={{backgroundColor:"#FAB8C4",width:"80px",height:"80px",borderRadius:"50%",position:"absolute",right:"35px",bottom:"400px"}}></span>
-<div className='container h-screen'style={{width:"50%",backgroundColor:"rgba(255,255,255,0.5)",borderRadius:"60%",display:"flex"}}>
-<div className='row'style={{position:"relative",width:"80%",backgroundColor:"rgba(255,255,255,0.8)",borderRadius:"50%",height:"80%",margin:"auto",display:"flex"}}>
-<div style={{width:"75%",backgroundColor:"#5956E9",borderRadius:"50%",height:"75%",margin:"auto",textAlign:"center",alignItems:"center"}}>
-<img class="access__pic" src="/access-2.png" alt="" style={{height:"470px",width:"720px",margin:"30px 75px"}} />
- 
-  <img class="access__pic js-parallax" data-scale="1.5" data-orientation="down" src="/main-2.png" alt="" style={{width:"220px",height:"120px", willChange: "transform",marginTop:"-330px",marginLeft:"-55px", transform: "translate3d(0px, -3px, 0px)"}} />
- 
-  <img class="access__pic js-parallax" data-scale="1.5" data-orientation="down" src="/cloud.png" alt="" style={{width:"130px",height:"100px", willChange: "transform",marginTop:"-10px",marginLeft:"550px", transform: "translate3d(0px, -3px, 0px)"}} />
-  
-  <img class="access__pic js-parallax" data-scale="1.5" data-orientation="up" src="/access-1.png" alt="" style={{marginTop:"-455px",marginLeft:"280px",width:"300px",height:"280px",willChange: "transform", transform: "translate3d(0px, -21px, 0px)"}} />
-  
+    <div className='container' style={{position:"relative",display:"flex",textAlign:"center",alignItems:"center"}}>
+
+<div style={{height:"750px",width:"750px",backgroundColor:"rgba(255,255,255,0.5)",borderRadius:"60%",display:"flex",margin:"auto"}}>
+<div style={{width:"80%",backgroundColor:"rgba(255,255,255,0.8)",borderRadius:"50%",height:"80%",margin:"auto",padding:"60px"}}>
+<div style={{backgroundColor:"#5956E9",borderRadius:"50%",height:"100%",width:"100%",margin:"auto"}}>
+<img src="/access-2.png" alt="" style={{display:"initial",width:"120%",height:"105%",margin:"33px 79px"}} />
+<img src="/access-1.png" alt="" style={{display:"initial",marginTop:"-912px",marginLeft:"302px",width:"300px",height:"280px",willChange: "transform", transform: "translate3d(0px, -21px, 0px)"}} />
+  <img  src="/main-2.png" alt="" style={{width:"220px",height:"120px", willChange: "transform",marginTop:"-380px",marginLeft:"-36px", transform: "translate3d(0px, -3px, 0px)"}} />
+   <img src="/cloud.png" alt="" style={{width:"137px",height:"89px", willChange: "transform",marginLeft:"543px", transform: "translate3d(0px, -3px, 0px)"}} />
+  <div style={{width:"12rem",height:"8rem",marginTop:"-27rem",marginLeft:"-12rem"}}><img className="access__pic js-parallax" src="/cloud.png" alt=""  /></div>
+  <div style={{backgroundColor:"#FFDC60",width:"90px",height:"90px",borderRadius:"50%",marginLeft:"-326px",marginTop:"250px",display:"inherit"}}></div>
+  <div style={{backgroundColor:"#5956E9",width:"45px",height:"45px",borderRadius:"50%",marginLeft:"606px",marginTop:"-472px",display:"inherit"}}></div>
+  <div className='media' style={{backgroundColor:"#FAB8C4",width:"80px",height:"80px",borderRadius:"50%",display:"inherit",marginLeft:"808px",marginTop:"180px"}}></div>
 </div>
 
-<div style={{position:"absolute",width:"12rem",height:"8rem",left:"-145px",top:"50px"}}><img className="access__pic js-parallax" data-scale="1.5" data-orientation="left" src="/cloud.png" alt=""  /></div>
+
 
 
 </div>
