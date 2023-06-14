@@ -78,7 +78,7 @@ function search(){
       <div style={{position:"absolute", backgroundColor:"#FFDC60",width:"500px",height:"500px",borderRadius:"50%",top:"-250px",zIndex:"-1",left:"-240px"}}></div>
     </div>
 <div className='' style={{backgroundColor:"#27272E"}}>
-  <div style={{display:"flex",position:"relative",maxWidth:"1800px", margin:"auto",padding:"150px 0px",justifyContent:"center"}}>
+  <div style={{display:"flex",position:"relative",maxWidth:"1800px", margin:"auto",padding:"150px 0px",justifyContent:"center",overflow:"hidden"}}>
 <div style={{display:"flex",gap:"8rem",color:"white",zIndex:"9999"}}><div style={{fontSize:"20px",fontWeight:"bold"}}><p>Features</p></div><div style={{width:"750px"}}><h1 className='text-7xl font-semibold'>The world's most powerful design tool.</h1><p style={{width:"450px",color:"rgba(255,255,255,0.5)",marginTop:"25px",fontSize:"20px"}}>Simultaneously design, code and collaborate with your team all from one place.</p></div></div>
 <div style={{position:"absolute",left:"-200px",top:"0px"}}><img style={{height:"1000px"}} src='/features-pic-1.svg'></img></div>
 <div style={{position:"absolute",width:"260px",height:"260px",backgroundColor:"#525260",borderRadius:"50%",right:"300px",top:"100px"}}></div>
