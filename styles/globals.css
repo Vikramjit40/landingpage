@@ -24,44 +24,61 @@ body {
   align-items: center;
   margin:auto
 }
-.con::before{
+.con::after{
 content: " ";
-height:8px;width:72px;background-color:#5956E9;position: absolute;
-top:390px;left:365px
+height:8px;width:72px;background-color:#5956E9;
+display:inline-block;
 }
-.con2::before{
+.con2::after{
     content: " ";
-    height:15px;width:15px;border-radius:50%;background-color:#5956E9;position: absolute;
-    top:590px;left:465px
+    height:15px;width:15px;border-radius:50%;background-color:#5956E9;display: inline-block;
 }
-  .triangle {
-    position: relative;
-    background-color: rgb(59, 59, 212);
-    text-align: left;
-  }
-  .triangle:before,
-  .triangle:after {
-    content: '';
-    position: absolute;
-    background-color: rgb(59, 59, 212);
-  }
-  .triangle,
-  .triangle:before,
-  .triangle:after {
-    width:  1.5em;
-    height: 1.5em;
-    border-top-right-radius: 30%;
-  }
-  
-  .triangle {
-    transform: rotate(-90deg) skewX(-30deg) scale(1,.866);
-  }
-  .triangle:before {
-    transform: rotate(-135deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%);
-  }
-  .triangle:after {
-    transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
-  }
+.header-items {
+  display: inline-block;
+  position: relative;
+}
+
+.header-items:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #5956E9;
+  transform-origin: bottom center;
+  transition: transform 0.25s ease-out;
+}
+.slick-next{
+  left:-85px ;
+  border:1px solid white !important;
+  border-radius:50%;
+  height:50px !important;
+  width:50px !important;
+}
+.slick-prev{
+  left:-151px !important;
+  border:1px solid white !important;
+  border-radius:50%;
+  height:50px !important;
+  width:50px !important;
+}
+.slick-prev:hover,.slick-next:hover{
+background-color: #5956E9 !important;
+border:none !important;
+}
+.slick-prev::before,.slick-next::before{
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 40px !important;
+ line-height: 0px !important;
+}
+
+.header-items:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom center;
+}
+
   @media screen and (max-width: 1256px) {
     .media {
      display:none !important
