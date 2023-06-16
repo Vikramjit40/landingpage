@@ -268,8 +268,8 @@ function toggle1(){
 </div>
 
 <img style={{position:"absolute",bottom:"-75px",zIndex:"0"}} src="/wave.svg"width={"100%"}></img>
-<img data-aos="rotate-c" data-aos-duration="1000" style={{position:"absolute",bottom:"-375px",zIndex:"1"}} src="/hand-2.png"></img>
-<img data-aos="rotate-c" data-aos-duration="1000" style={{position:"absolute",bottom:"-575px",zIndex:"1",right:"0",width:"524px"}} src="/hand-3.png"></img>
+<img data-aos="rotate-c"  style={{position:"absolute",bottom:"-375px",zIndex:"1"}} src="/hand-2.png"></img>
+<img data-aos="rotate-c"  style={{position:"absolute",bottom:"-575px",zIndex:"1",right:"0",width:"524px"}} src="/hand-3.png"></img>
 </div>
 <div className='relative' style={{padding:"250px 72px 150px",maxWidth:"1240px",margin:"auto",alignItems:"center",justifyContent:"center"}}>
 <p data-AOS="fade-up" style={{color:"#C75C6F" ,fontWeight:"bold",fontSize:"20px"}}>Team Collaboration Redefined</p>
