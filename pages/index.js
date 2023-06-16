@@ -4,13 +4,15 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import AOS from 'aos'
 import Slider from "react-slick";
-
+import { Modal,ModalBody, ModalHeader } from 'reactstrap'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+  const[check,setCheck]=useState(true)
+  const[modal1,setModal1]=useState(false)
 const [searchOpen,setSearchOpen]=useState(false)
   useEffect(()=>{
   AOS.init();
@@ -32,6 +34,20 @@ var settings = {
 
 };
 
+var setting = {
+  dots: false,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 2,
+  slidesToScroll: 1,
+};
+
+function handleChange() {
+  setCheck(!check)
+}
+function toggle1(){
+  setModal1(!modal1)
+}
   return (
     <>
     <div style={{overflowX:"clip",paddingBottom:"150px",position:"relative"}}>
@@ -168,7 +184,7 @@ var settings = {
     
     </div>
 </div>
-<div className='flex container-fluid pl-20 py-20' style={{position:"relative", display:"flex",flexDirection:"row-reverse",background:"#fff -webkit-gradient(linear, left top, right top, from(#ECF2F6), color-stop(70.31%, rgba(236, 242, 246, 0)))",backgroundColor:"#ecf2f6",maxWidth:"1240px",borderRadius:"40px",border:"1px solid #F1F5F8",margin:"auto"}}>
+<div className='flex container-fluid pl-20 py-20' style={{position:"relative", display:"flex",flexDirection:"row-reverse",background:"#fff -webkit-gradient(linear, left top, right top, from(#ecf2f6), color-stop(70.31%, rgba(236, 242, 246, 0)))",maxWidth:"1240px",borderRadius:"40px",border:"1px solid #F1F5F8",margin:"auto"}}>
 <div style={{maxWidth:"840px",marginTop:"50px",overflow:"hidden",paddingLeft:"200px",zIndex:"9999"}}>
     <img data-aos="rotate-c" ata-aos-duration="1000" src='/hand-1.png' style={{width:"840px"}}></img>
   </div>
@@ -184,11 +200,130 @@ var settings = {
 <div style={{position:"absolute" ,width:"130px",height:"130px",borderRadius:"50%",backgroundColor:"#FFDC60",bottom:"-50px",left:"150px",zIndex:'1'}}></div>
 
 </div>
-<div  className='flex container-fluid py-48' style={{zIndex:"-1",position:"relative",alignItems:"center",justifyContent:"center",backgroundColor:"#FFFFFF"}}>
- <div className='text-center'> <p className='font-bold mb-3'>Join The Revolution</p>
+<div  className=' container-fluid py-48' style={{maxWidth:"1240px",zIndex:"0",position:"relative",alignItems:"center",justifyContent:"center",backgroundColor:"#FFFFFF"}}>
+ <div data-AOS="fade-up" className='text-center'> <p className='font-bold mb-3 text-xl'>Join The Revolution</p>
   <h1 className='text-7xl'>Find the <span className='text-[#5956E9]'>Right Plan.</span></h1>
-  <p className='text-[#999FAE]'>Flexible pricing options for freelancers and design teams.</p>
+  <p className='text-[#999FAE] w-[300px] mt-8 mx-auto'>Flexible pricing options for freelancers and design teams.</p>
+ <div className='flex items-center justify-center mt-8 gap-5 hover:opacity-90'><p className='font-[600]' style={{color:check ? "#999FAE" : "#5956E9" }}>Billed Yearly</p> <label for="switch" className="switch" >
+  <input id='switch' type="checkbox" onChange={handleChange} checked={check} />
+  <span className="slider round"></span>
+</label>
+<p style={{color:check ? "#5956E9" : "#999FAE"}} className='font-[600]'>Billed Monthly</p>
 </div>
+</div>
+<div className='flex mt-24 mx-auto gap-28 '>
+  <div data-AOS="fade-up" className='w-80 bg-[#5956E9] pl-8 pt-2 pr-2 pb-12 rounded-3xl text-white'>
+    <div className="float-right bg-[#FFDC60] h-12 w-12 rounded-full items-center justify-center flex"><span className='fa fa-star' style={{color:"#5956E9"}}></span></div>
+    <p className="flex mt-8"> <img src="/smile-1.svg"></img>Individual</p>
+    <h3 className='mt-1 text-4xl'>Professional</h3>
+    <p className='mt-3 text-xl'>$19.99 <span className='text-lg text-[#999FAE]'>/month</span></p>
+    <ul className='mt-5 text-lg'>
+      <li className='firs'>1 user</li>
+      <li className='firs'>2 TB of secure storage</li>
+      <li className='firs' >Premium productivity features and simple, secure file sharing</li>
+    </ul>
+    <button className='font-normal hover:-translate-y-1 mt-4 focus:outline-none' style={{transition:"all .45s",color:"#2522BA",backgroundColor:"#FFFFFF",height:"70px",width:"260px",borderRadius:"15px"}}>Try free for 30 days</button>
+  </div>
+  <div data-AOS="fade-up" data-aos-delay="300" className='w-80 bg-[#FFFFFF] pl-8 pt-2 pr-2 pb-12 rounded-3xl text-black'>
+    <p className="flex mt-8 font-light" > <img src="/smile-2.svg"></img>Small Team</p>
+    <h3 className='mt-1 text-4xl'>Standard</h3>
+    <p className='mt-3 text-xl font-[500] text-[#5956E9]'>$29.99 <span className='text-lg text-[#999FAE]'>/month</span></p>
+    <ul className='mt-5 text-lg text-[#999FAE]'>
+      <li className='sec'>3+ user</li>
+      <li className='sec'>5 TB of secure storage</li>
+      <li className='sec' >Premium productivity features and simple, secure file sharing</li>
+    </ul>
+    <button className='font-normal hover:-translate-y-1 mt-4 focus:outline-none' style={{transition:"all .45s",color:"#292930",backgroundColor:"#FAB8C4",height:"70px",width:"260px",borderRadius:"15px"}}>Try free for 30 days</button>
+  </div>
+  <div data-AOS="fade-up" data-aos-delay="500" className='w-80 bg-[#FFFFFF] pl-8 pt-2 pr-2 pb-12 rounded-3xl text-black border-1'>
+    <p className="flex mt-8 font-light" > <img src="/smile-2.svg"></img>Large Team</p>
+    <h3 className='mt-1 text-4xl'>Ultimate</h3>
+    <p className='mt-3 text-xl font-[500] text-[#5956E9]'>$99.99 <span className='text-lg text-[#999FAE]'>/month</span></p>
+    <ul className='mt-5 text-lg text-[#999FAE]'>
+      <li className='sec'>10+ user</li>
+      <li className='sec'>10 TB of secure storage</li>
+      <li className='sec' >Premium productivity features and simple, secure file sharing</li>
+    </ul>
+    <button onClick={toggle1} className='font-normal hover:-translate-y-1 mt-4 focus:outline-none' style={{transition:"all .45s",color:"#FFFFFF",backgroundColor:"#5956E9",height:"70px",width:"260px",borderRadius:"15px"}}>Try free for 30 days</button>
+  </div>
+</div>
+<div className='w-12 h-12 bg-[#FAB8C4] rounded-full absolute top-80 right-32'></div>
+
+</div>
+<div className='relative' style={{backgroundColor:"#FAB8C4"}}>
+  <div style={{position:"relative",maxWidth:"1240px", margin:"auto",zIndex:"1",padding:"150px 172px 100px"}}>
+<p className='col text-[#C75C6F]'>Collaboration Redefined</p>
+<h1 className='text-[#3A38BF] text-9xl font-semibold'>Get Work Done <span className='text-[#FFFFFF]'>together</span></h1>
+<img data-AOS="fade-down-left" style={{position:"absolute",width:"900px",height:"900px",top:"0",right:"0",zIndex:"-1"}} src="/work-pic.png" ></img>
+<img data-AOS="fade-up-left" src="/cursor.png" style={{margin:"50px auto"}}></img>
+<div style={{backgroundColor:"#5956E9",width:"200px",height:"200px",borderRadius:"50%",zIndex:"-1",margin:"-350px 35% 0px"}}></div>
+<div style={{backgroundColor:"#FFFFFF",width:"80px",height:"80px",borderRadius:"50%",marginLeft:"180px"}}></div>
+<div style={{backgroundColor:"#FFFFFF",width:"40px",height:"40px",borderRadius:"50%",marginLeft:"0px",marginTop:"60px"}}></div>
+<div style={{backgroundColor:"#FFFFFF",width:"60px",height:"60px",borderRadius:"50%",marginLeft:"280px",marginTop:"60px"}}></div>
+<div data-AOS="fade-up" data-aos-duration='1000' style={{padding:"100px 80px", position:"absolute",bottom:"-150px",right:"100px",backgroundColor:"#5956E9",width:"450px",height:"450px",borderRadius:"50%",alignItems:"center",justifyContent:"center"}}>
+  <img src="layout-1.svg" style={{width:"40px"}}></img>
+<p className='text-white mt-8 text-2xl'>Let your personalized Collab assistant do the heavy lifting while you focus on creating.</p>
+<Link className="slickItems text-[rgba(255,255,255,0.5)] hover:text-white hover:pl-16" href="#" style={{margin:"30px 0px"}} >Find out more</Link>
+</div>
+</div>
+
+<img style={{position:"absolute",bottom:"-75px",zIndex:"0"}} src="/wave.svg"width={"100%"}></img>
+<img data-aos="rotate-c" data-aos-duration="1000" style={{position:"absolute",bottom:"-375px",zIndex:"1"}} src="/hand-2.png"></img>
+<img data-aos="rotate-c" data-aos-duration="1000" style={{position:"absolute",bottom:"-575px",zIndex:"1",right:"0",width:"524px"}} src="/hand-3.png"></img>
+</div>
+<div className='relative' style={{padding:"250px 72px 150px",maxWidth:"1240px",margin:"auto",alignItems:"center",justifyContent:"center"}}>
+<p data-AOS="fade-up" style={{color:"#C75C6F" ,fontWeight:"bold",fontSize:"20px"}}>Team Collaboration Redefined</p>
+<h1 data-AOS="fade-up" className='pin text-7xl mt-3'>Helping world-class teams design faster together<span className='text-[#3A38BF]'>.</span></h1>
+<div className='flex gap-8'>
+  <h1 data-AOS="fade-down" className='text-4xl w-60 pt-28'>What others are saying</h1>
+<div className='sli' style={{width:"800px",fontSize:"25px",paddingTop:"120px"}}> 
+<Slider {...setting}>
+        <div data-AOS="fade-up" style={{margin:"5px 25px"}}className='px-4'>
+          <div data-AOS="zoom-in"data-aos-delay="300" style={{width:"100%",height:"2px",backgroundColor:"#5956E9",marginBottom:"52px"}}></div>
+          <p className='mb-6 text-[#C75C6F]'>UI8</p>
+          <p>“ Collab is fast. Files are always up to date. </p>
+          <p>It’s easy to share designs across the organization, so collaboration is easy ”</p>
+          <div className='flex mt-8 gap-3'><img src="/ui8.png" style={{width:"70px"}}></img>
+          <div className='text-base'><p >Dash</p>
+          <p className='text-[#999FAE]'>Founder @UI8</p></div></div>
+        </div>
+        <div data-AOS="fade-up" data-aos-delay="300" style={{margin:"5px"}}className='px-4'>
+        <div data-AOS="zoom-in"data-aos-delay="500" style={{width:"100%",height:"2px",backgroundColor:"#FAB8C4",marginBottom:"52px"}}></div>
+        <p className='mb-6 text-[#5956E9]'>Bento</p>
+        <p>“ Collab is fast. Files are always up to date. </p>
+          <p>It’s easy to share designs across the organization, so collaboration is easy ”</p>
+          <div className='flex mt-8 gap-3'><img src="/ava-1.png" style={{width:"60px"}}></img>
+          <div className='text-base'><p >Emily</p>
+          <p className='text-[#999FAE]'>Founder @Bento</p></div></div>
+        </div>
+        <div style={{margin:"5px"}}className='px-4'>
+        <div style={{width:"100%",height:"2px",backgroundColor:"#5956E9",marginBottom:"52px"}}></div>
+          <p className='mb-6 text-[#C75C6F]'>UI8</p>
+          <p>“ Collab is fast. Files are always up to date. </p>
+          <p>It’s easy to share designs across the organization, so collaboration is easy ”</p>
+          <div className='flex mt-8 gap-3'><img src="/ui8.png" style={{width:"70px"}}></img>
+          <div className='text-base'><p >Dash</p>
+          <p className='text-[#999FAE]'>Founder @UI8</p></div></div>
+        </div>
+        <div style={{margin:"5px"}} className='px-4'>
+        <div style={{width:"100%",height:"2px",backgroundColor:"#FAB8C4",marginBottom:"52px"}}></div>
+        <p className='mb-6 text-[#5956E9]'>Bento</p>
+        <p>“ Collab is fast. Files are always up to date. </p>
+          <p>It’s easy to share designs across the organization, so collaboration is easy ”</p>
+          <div className='flex mt-8 gap-3'><img src="/ava-1.png" style={{width:"60px"}}></img>
+          <div className='text-base'><p >Emily</p>
+          <p className='text-[#999FAE]'>Founder @Bento</p></div></div>
+        </div>
+</Slider>
+</div>
+</div>
+</div>
+<div className='relative' style={{padding:"0px 72px",maxWidth:"1240px",margin:"auto",display:"flex"}}>
+  <div style={{width:"320px"}}><h1 className='text-[#A4B16E] text-lg font-semibold'>Collab is fast, super fast.</h1>
+  <h1 className='you text-6xl mt-6'>Speed up your workflow<span className='text-[#5956E9]'>.</span></h1>
+  <p className='mt-12'>Essentially no lag, no matter the size of the file, even on mobile devices.</p>
+  <p className="text-[250px] font-medium">8.1<span className="text-[60px]">x</span></p>
+  </div>
 </div>
 </>
   )
