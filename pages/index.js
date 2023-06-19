@@ -28,10 +28,8 @@ var settings = {
   slidesToShow: 2,
   slidesToScroll: 1,
   beforeChange: (current, next) => {
-    setCount(next+1);
-    
+    setCount(next+1);    
   }
-
 };
 
 var setting = {
@@ -41,7 +39,22 @@ var setting = {
   slidesToShow: 2,
   slidesToScroll: 1,
 };
-
+var setting4 = {
+  dots: false,
+  infinite: false,
+  speed: 500,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+};
+var sett={
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  fade:true,
+  speed:800,
+}
 function handleChange() {
   setCheck(!check)
 }
@@ -268,8 +281,10 @@ function toggle1(){
 </div>
 
 <img style={{position:"absolute",bottom:"-75px",zIndex:"0"}} src="/wave.svg"width={"100%"}></img>
-<img data-aos="rotate-c"  style={{position:"absolute",bottom:"-375px",zIndex:"1"}} src="/hand-2.png"></img>
-<img data-aos="rotate-c"  style={{position:"absolute",bottom:"-575px",zIndex:"1",right:"0",width:"524px"}} src="/hand-3.png"></img>
+<img data-aos="rotate-d"  style={{position:"absolute",bottom:"-375px",zIndex:"1"}} src="/hand-2.png"></img>
+<div style={{position:"absolute",bottom:"-575px",zIndex:"1",right:"0",overflow:"hidden"}}>
+<img data-aos="rotate-f" style={{width:"524px"}}  src="/hand-3.png"></img>
+</div>
 </div>
 <div className='relative' style={{padding:"250px 72px 150px",maxWidth:"1240px",margin:"auto",alignItems:"center",justifyContent:"center"}}>
 <p data-AOS="fade-up" style={{color:"#C75C6F" ,fontWeight:"bold",fontSize:"20px"}}>Team Collaboration Redefined</p>
@@ -319,11 +334,178 @@ function toggle1(){
 </div>
 </div>
 <div className='relative' style={{padding:"0px 72px",maxWidth:"1240px",margin:"auto",display:"flex"}}>
-  <div style={{width:"320px"}}><h1 className='text-[#A4B16E] text-lg font-semibold'>Collab is fast, super fast.</h1>
+  <div data-AOS="fade-zoom-in" style={{width:"320px"}}><h1 className='text-[#A4B16E] text-lg font-semibold'>Collab is fast, super fast.</h1>
   <h1 className='you text-6xl mt-6'>Speed up your workflow<span className='text-[#5956E9]'>.</span></h1>
   <p className='mt-12'>Essentially no lag, no matter the size of the file, even on mobile devices.</p>
-  <p className="text-[250px] font-medium">8.1<span className="text-[60px]">x</span></p>
+  <p data-AOS="fade-up" className="text-[250px] font-medium">8.1<span className="text-[60px]">x</span></p>
   </div>
+  <div style={{width:"100%",position:"relative"}} ><img className='m-auto' data-AOS="fade-down" data-aos-delay="400" style={{zIndex:"2",position:"inherit"}} src="graphic.png" width={"350px"} height={"600px"} ></img>
+  <div data-AOS="fade-zoom-in" className='rounded-full bg-[#5956E9] absolute top-24 left-32' style={{width:"510px",height:"510px",zIndex:"-1"}}></div>
+  <img data-AOS="fade-left" data-aos-delay="400" className='absolute' style={{bottom:"128px",right:"-69px"}} width={"350px"} src="plant.png"></img>
+  </div>
+  <div className='absolute top-28 left-1' style={{zIndex:"1"}}><img src="line.svg"></img></div>
+</div>
+<div className='relative bor ' style={{padding:"0px 92px",maxWidth:"1240px",margin:"80px auto",display:"flex",backgroundColor:"#FFD3DB",borderRadius:"50px"}}>
+<div className='sli3' style={{width:"100%",fontSize:"25px",paddingTop:"100px",paddingBottom:"40px",zIndex:"2",position:"inherit"}}> 
+<Slider {...sett}>
+  <div>
+  <div style={{display:"flex !important"}}>
+<div data-AOS="fade-right" data-aos-delay="300" className='w-96 bg-[#ffffff] pl-8 pt-2 pr-8 pb-16 rounded-3xl text-black'>
+    <p className="flex mt-8 font-light text-xs items-center gap-3" > <img src="/smile-2.svg"></img>Awesome feature</p>
+    <h3 className='mt-1 text-4xl'>Ultimate features</h3>
+    <p className='mt-3 text-base w-72 font-[400] text-[#999FAE]'>It’s easy to share designs across the organization, so team collaboration is fast and easy.</p>
+    <ul className='mt-5 mb-7 text-base'>
+      <li className='awe hover:opacity-80 cursor-pointer flex items-center'><img src="layout-1.svg"></img><span className='pl-4'> Awesome website </span><span className='text-5xl font-[300] pl-16'> &gt; </span></li>
+      <li className='stu hover:opacity-80 cursor-pointer flex mt-8 items-center'><img src="layout-3.svg"></img> <span className='pl-4'>Stunning interface</span> <span className='text-5xl font-[300] pl-16'> &gt; </span></li>
+    </ul>
+    <button className='text-base hover:-translate-y-1 mt-4 focus:outline-none' style={{transition:"all .45s",color:"#FFFFFF",backgroundColor:"#5956E9",height:"70px",width:"160px",borderRadius:"15px",float:"right"}}>Get Started</button>
+  </div>
+  <div style={{paddingLeft:"65px",paddingTop:"85px"}}>
+    <img src="laptop.png" style={{margin:"auto"}} width={"600px"}></img>
+  </div>
+  </div>
+  </div>
+  <div>
+  <div style={{display:"flex !important"}}>
+  <div data-AOS="fade-right" data-aos-delay="300" className='w-96 bg-[#ffffff] pl-8 pt-2 pr-8 pb-16 rounded-3xl text-black'>
+    <p className="flex mt-8 font-light text-xs items-center gap-3" > <img src="/smile-2.svg"></img>Awesome feature</p>
+    <h3 className='mt-1 text-4xl'>Standard features</h3>
+    <p className='mt-3 text-base w-72 font-[400] text-[#999FAE]'>It’s easy to share designs across the organization, so team collaboration is fast and easy.</p>
+    <ul className='mt-5 mb-7 text-base'>
+      <li className='awe hover:opacity-80 cursor-pointer flex items-center'><img src="layout-1.svg"></img><span className='pl-4'> Awesome website </span><span className='text-5xl font-[300] pl-16'> &gt; </span></li>
+      <li className='stu hover:opacity-80 cursor-pointer flex mt-8 items-center'><img src="layout-3.svg"></img> <span className='pl-4'>Stunning interface</span> <span className='text-5xl font-[300] pl-16'> &gt; </span></li>
+    </ul>
+    <button className='text-base hover:-translate-y-1 mt-4 focus:outline-none' style={{transition:"all .45s",color:"#FFFFFF",backgroundColor:"#5956E9",height:"70px",width:"160px",borderRadius:"15px",float:"right"}}>Get Started</button>
+  </div>
+  <div style={{paddingLeft:"65px",paddingTop:"85px"}}>
+    <img src="laptop.png" style={{margin:"auto"}} width={"600px"}></img>
+  </div>
+  </div>
+  </div>
+  <div>
+  <div style={{display:'flex !important'}}>
+  <div data-AOS="fade-right" data-aos-delay="300" className='w-96 bg-[#ffffff] pl-8 pt-2 pr-8 pb-16 rounded-3xl text-black'>
+    <p className="flex mt-8 font-light text-xs items-center gap-3" > <img src="/smile-2.svg"></img>Awesome feature</p>
+    <h3 className='mt-1 text-4xl'>Ultimate features</h3>
+    <p className='mt-3 text-base w-72 font-[400] text-[#999FAE]'>It’s easy to share designs across the organization, so team collaboration is fast and easy.</p>
+    <ul className='mt-5 mb-7 text-base'>
+      <li className='awe hover:opacity-80 cursor-pointer flex items-center'><img src="layout-1.svg"></img><span className='pl-4'> Awesome website </span><span className='text-5xl font-[300] pl-16'> &gt; </span></li>
+      <li className='stu hover:opacity-80 cursor-pointer flex mt-8 items-center'><img src="layout-3.svg"></img> <span className='pl-4'>Stunning interface</span> <span className='text-5xl font-[300] pl-16'> &gt; </span></li>
+    </ul>
+    <button className='text-base hover:-translate-y-1 mt-4 focus:outline-none' style={{transition:"all .45s",color:"#FFFFFF",backgroundColor:"#5956E9",height:"70px",width:"160px",borderRadius:"15px",float:"right"}}>Get Started</button>
+  </div>
+  <div style={{paddingLeft:"65px",paddingTop:"85px"}}>
+    <img src="laptop.png" style={{margin:"auto"}} width={"600px"}></img>
+  </div>
+  </div>
+  </div>
+  <div>
+  <div style={{display:'flex !important'}}>
+  <div data-AOS="fade-right" data-aos-delay="300" className='w-96 bg-[#ffffff] pl-8 pt-2 pr-8 pb-16 rounded-3xl text-black'>
+    <p className="flex mt-8 font-light text-xs items-center gap-3" > <img src="/smile-2.svg"></img>Awesome feature</p>
+    <h3 className='mt-1 text-4xl'>Standard features</h3>
+    <p className='mt-3 text-base w-72 font-[400] text-[#999FAE]'>It’s easy to share designs across the organization, so team collaboration is fast and easy.</p>
+    <ul className='mt-5 mb-7 text-base'>
+      <li className='awe hover:opacity-80 cursor-pointer flex items-center'><img src="layout-1.svg"></img><span className='pl-4'> Awesome website </span><span className='text-5xl font-[300] pl-16'> &gt; </span></li>
+      <li className='stu hover:opacity-80 cursor-pointer flex mt-8 items-center'><img src="layout-3.svg"></img> <span className='pl-4'>Stunning interface</span> <span className='text-5xl font-[300] pl-16'> &gt; </span></li>
+    </ul>
+    <button className='text-base hover:-translate-y-1 mt-4 focus:outline-none' style={{transition:"all .45s",color:"#FFFFFF",backgroundColor:"#5956E9",height:"70px",width:"160px",borderRadius:"15px",float:"right"}}>Get Started</button>
+  </div>
+  <div style={{paddingLeft:"65px",paddingTop:"85px"}}>
+    <img src="laptop.png" style={{margin:"auto"}} width={"600px"}></img>
+  </div>
+  </div>
+  </div>   
+</Slider>
+</div>
+<img style={{position:"absolute" ,top:"-106px",left:"-152px",maxWidth:"150% !important",zIndex:"1"}} src="line-1.svg" width={"120%"} />
+<div style={{position:"absolute",zIndex:"0",overflow:"hidden",top:"0px",left:"0px",width:"500px",height:"500px",borderRadius:"50px"}}><div data-AOS="fade-down-right" data-aos-duration="300" style={{marginLeft:"-140px",marginTop:"-120px",backgroundColor:"#5956E9",width:"500px",height:"500px",borderRadius:"50%"}}></div></div>
+<div style={{backgroundColor:"#5956E9",width:"210px",height:"210px",borderRadius:"50%",position:"absolute",zIndex:"0",bottom:"-60px",left:"360px",alignItems:"center",display:"flex"}}><div className='cir'></div></div>
+<div className='w-12 h-12 bg-white absolute rounded-full top-24 right-96'></div>
+</div>
+<div className='relative' style={{padding:"70px 92px",maxWidth:"1240px",margin:"80px auto",backgroundColor:"#FFFFFF",borderRadius:"50px"}}>
+<div data-AOS="fade-up" className='text-center w-96 m-auto'><p style={{fontSize:"50px"}}>🔥</p>
+<p className='w-96 font-thin mt-4' style={{fontFamily:"'DM Sans', sans-serif !important",fontSize:"22px"}}>We offer flexible pricing options for freelancers and design teams.</p>
+</div>
+<div className='flex mt-24 mx-auto gap-24'>
+  <div data-AOS="fade-up"  className='w-[28rem] bg-[#FFFFFF] p-16 rounded-3xl text-black border-1'>
+  <h1 className='text-6xl'>Schedule Product Demo</h1>
+    <h3 className='mt-12 text-[#999FAE] text-xl'>Still not sure? Schedule a demo to see how Collab can help you get more done.</h3>
+    <button className='font-medium hover:-translate-y-1 mt-24 focus:outline-none' style={{transition:"all .45s",fontFamily : "'DM Sans', sans-serif !important",color:"#FFFFFF",backgroundColor:"#5956E9",height:"70px",width:"320px",borderRadius:"15px"}}>Schedule a Demo</button>
+  </div>
+  <div data-AOS="fade-up" data-aos-delay="300" className='w-[28rem] bg-[#5956E9] p-16 rounded-3xl text-white'>
+  <h1 className='text-6xl'>Get Started Now</h1>
+    <h3 className='mt-12 text-[#FFFFFF] text-xl'>Ready to revolutionize your design workflow? Try Collab for free for 30 days.</h3>
+    <button className='font-medium hover:-translate-y-1 mt-24 focus:outline-none' style={{fontFamily : "'DM Sans', sans-serif !important",transition:"all .45s",color:"#2522BA",boxShadow:"0px 20px 20px rgba(0,0,0,0.2)",backgroundColor:"#FFFFFF",height:"70px",width:"320px",borderRadius:"15px"}}>Try free for 30 days</button>
+  </div>
+</div>
+<div className='absolute w-16 h-16 rounded-full bg-[#5956E9] right-56 -bottom-5'  ></div>
+</div>
+<div className='relative' style={{backgroundColor:"#FFFFFF",overflow:"hidden"}}>
+<div className='relative' style={{padding:"70px 92px",maxWidth:"1240px",margin:"80px auto",backgroundColor:"#FFFFFF",borderRadius:"50px"}}>
+<div className='w-24 h-24 bg-[#FFDC60] rounded-full absolute top-4 left-64'></div>
+<div className='w-8 h-8 bg-[#FFDC60] rounded-full absolute top-0 right-[38rem]'></div>
+<div className='mt-32 flex gap-28'>
+  <div data-AOS="fade-up" className='w-96'><h1 className='text-[#C75C6F] font-semibold text-xl' >Design accordlogy</h1>
+  <h1 className='text-7xl mt-4 mb-12'>Enrich your design workflow<span className='text-[#5956E9]'>.</span></h1>
+  <p className='text-lg text-[#999FAE]'>Design anything from simple icons to fully featured websites and applications.</p>
+  </div>
+  <div data-AOS="fade-up" data-aos-delay="300" style={{zIndex:"1 "}} className='pl-16'><img src="design-pic.png" width={"290px"} height={"290px"} /></div>
+  </div>
+<Link href="/"style={{display:"flex"}}><img src="/scroll.svg" width={"20px"}></img><p style={{color:"#999fae",marginTop:"5px",marginLeft:"15px"}}>Using Collab</p></Link>
+<div className='sli4 mt-24'>
+<Slider {...setting4}>
+  <div>
+        <div data-AOS="fade-up" style={{margin:"5px 25px"}}className='px-4 rounded-3xl pt-8 pb-3 bg-[#FFEDDC]'>
+          <div className='bg-[#FAB8C4] rounded-full w-48 h-48 m-auto'><img style={{marginLeft:"10px",width:"350px",maxWidth:"350px !important"}} src="design-pic-1.png"></img></div>
+          <div className='mt-12 bg-white px-8 py-12 rounded-3xl'>
+            <h1>Design</h1>
+            <h1 className='text-3xl mt-4'>Automation Color Picker</h1>
+            <p className="mt-4 text-[#999FAE]">Use the smart color picker to easily select and apply colors.</p>
+            <p className='mt-4 font-[600] started cursor-pointer'>Get started</p>
+          </div>
+        </div>
+        </div>
+        <div data-AOS="fade-up" data-aos-delay="300" style={{margin:"5px 25px"}}className='px-4 rounded-3xl pt-8 pb-3 bg-[#DBDEFF]'>
+          <div className='bg-[#5956E9] rounded-full pt-[35px] w-48 h-48 m-auto'><img style={{marginLeft:"30px",width:"150px",maxWidth:"150px !important"}} src="design-pic-2.png"></img></div>
+          <div className='mt-12 bg-white px-8 py-12 rounded-3xl'>
+            <h1>Build</h1>
+            <h1 className='text-3xl mt-4'>Component Builder Guide</h1>
+            <p className="mt-4 text-[#999FAE]">Using the Component Builder with your projects.</p>
+            <p className='mt-4 font-[600] startedbl cursor-pointer text-[#5956E9]'>Get started</p>
+          </div>
+        </div>
+        <div data-AOS="fade-up" data-aos-delay="400" style={{margin:"5px 25px"}}className='px-4 rounded-3xl pt-8 pb-3 bg-[#DBF8FF]'>
+          <div className='bg-[#90C8FC] rounded-full w-48 h-48 m-auto pt-[35px]'><img style={{marginLeft:"20px",width:"140px",maxWidth:"140px !important"}} src="design-pic-3.png"></img></div>
+          <div className='mt-12 bg-white px-8 py-12 rounded-3xl'>
+            <h1>Ship</h1>
+            <h1 className='text-3xl mt-4'>Cross-platform Deployment</h1>
+            <p className="mt-4 text-[#999FAE]">Deploy your projects more efficiently for web & mobile.</p>
+            <p className='mt-4 font-[600] started cursor-pointer'>Get started</p>
+          </div>
+        </div>
+        <div data-AOS="fade-up" data-aos-delay="300" style={{margin:"5px 25px"}}className='px-4 rounded-3xl pt-8 pb-3 bg-[#FFEDDC]'>
+          <div className='bg-[#FAB8C4] rounded-full w-48 h-48 m-auto'><img style={{marginLeft:"10px",width:"350px", maxWidth:"350px !important"}} src="design-pic-1.png"></img></div>
+          <div className='mt-12 bg-white px-8 py-12 rounded-3xl'>
+            <h1>Design</h1>
+            <h1 className='text-3xl mt-4'>Automation Color Picker</h1>
+            <p className="mt-4 text-[#999FAE]">Use the smart color picker to easily select and apply colors.</p>
+            <p className='mt-4 font-[600] started cursor-pointer'>Get started</p>
+          </div>
+        </div>
+        <div data-AOS="fade-up" data-aos-delay="300" style={{margin:"5px 25px"}}className='px-4 rounded-3xl pt-8 pb-3 bg-[#DBDEFF]'>
+          <div className='bg-[#5956E9] rounded-full pt-[35px] w-48 h-48 m-auto'><img style={{marginLeft:"30px",width:"150px",maxWidth:"150px !important"}} src="design-pic-2.png"></img></div>
+          <div className='mt-12 bg-white px-8 py-12 rounded-3xl'>
+            <h1>Build</h1>
+            <h1 className='text-3xl mt-4'>Component Builder Guide</h1>
+            <p className="mt-4 text-[#999FAE]">Using the Component Builder with your projects.</p>
+            <p className='mt-4 font-[600] startedbl cursor-pointer text-[#5956E9]'>Get started</p>
+          </div>
+        </div>
+</Slider>
+</div>
+</div>
+<div data-aos="rotate-e" data-aos-duration="700"  className='absolute right-0 top-24 w-[40rem]' style={{zIndex:"0"}}><img src="hand-4.png"></img></div>
 </div>
 </>
   )
