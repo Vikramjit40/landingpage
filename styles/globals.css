@@ -609,6 +609,91 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
+
+.wrap-collabsible input[type='checkbox'] {
+  display: none;
+}
+
+.decorated_box{
+  background-image: url(../public/accord-pic.png);
+  background-repeat: no-repeat;
+  
+}
+.lbl-toggle {
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  padding: 30px;
+  color: black;
+  text-align: left;
+/*   background: #eaecf0; */
+  cursor: pointer;
+  border-radius: 18px;
+  position: relative;
+  font-weight: 500;
+}
+.lbl-toggle:hover{
+  color:#5956E9
+}
+.lbl-toggle::before {
+  content: ' ';
+  width: 2px;
+  height: 20px;
+  background-color: black;
+  transform: translateY(-2px);
+  transition: transform .2s ease-out;
+  float: right;
+  margin-top: 9px;
+}
+
+.lbl-toggle::after {
+  content: ' ';
+  width: 20px;
+  height: 2px;
+  background-color: black;
+  transform: translateY(-2px);
+  transition: transform .2s ease-out;
+  right:20.5px;
+  position: absolute;
+  margin-top: -13.46px;
+}
+
+.toggle:checked+.lbl-toggle::before {
+  transform: rotate(90deg) translateX(-3px);
+  background-color: #fff;
+}
+.toggle:checked+.lbl-toggle::after {
+  background-color: #fff;
+}
+.toggle:checked+.lbl-toggle{
+  background-color: #5956E9;
+  color: #fff;
+}
+.collapsible-content {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height .25s ease-in-out;
+  transition-duration: .4s;
+}
+
+.toggle:checked+.lbl-toggle+.collapsible-content {
+  max-height: 3050px;
+
+}
+
+.collapsible-content .content-inner {
+  padding: 2rem 4rem;
+  box-shadow:0 5px 40px rgba(39, 39, 46, 0.1)
+}
+.grsc{
+  filter: grayscale(100%);
+}
+.grsc:hover{
+  filter: grayscale(0%);
+}
+.effort{
+  font-weight: 600;
+  font-size: 20px;
+}
   @media screen and (max-width: 1256px) {
     .media {
      display:none !important
